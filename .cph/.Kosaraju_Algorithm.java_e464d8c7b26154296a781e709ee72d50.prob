@@ -1,0 +1,1 @@
+{"name":"Local: Kosaraju_Algorithm","url":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\Kosaraju_Algorithm.java","tests":[{"id":1628139203346,"input":"5 6\n1 4\n1 3\n2 4\n3 4\n4 5\n5 1","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\Kosaraju_Algorithm.java","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: As_Far_From_Land_As_Possible","url":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\As_Far_From_Land_As_Possible.java","tests":[{"id":1629396592067,"input":"3\n0 0 0\n0 1 1\n1 1 1","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\As_Far_From_Land_As_Possible.java","group":"local","local":true}
