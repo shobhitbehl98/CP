@@ -53,5 +53,6 @@ public class Two_Sum {
     for (String str : finalResult) {
       System.out.println(str);
     }
+    scn.close();
   }
 }
