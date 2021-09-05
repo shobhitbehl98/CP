@@ -8,9 +8,12 @@ public class Two_Sum {
     Arrays.sort(arr);
     int i=0,j=arr.length-1;
     List<List<Integer>> li=new ArrayList<>();
-    HashSet<Integer> h=new HashSet<>();
     while(i<j){
-        if(arr[i]+arr[j]==target&&(!h.contains(arr[i]))){
+        if(i>0&&arr[i]==arr[i-1]){
+            i++;
+            continue;
+        }
+        if(arr[i]+arr[j]==target){
             List<Integer> l=new ArrayList<>();
             l.add(arr[i]);
             l.add(arr[j]);
