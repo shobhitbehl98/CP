@@ -18,8 +18,6 @@ public class Two_Sum {
             l.add(arr[i]);
             l.add(arr[j]);
             li.add(l);
-            h.add(arr[i]);
-            h.add(arr[j]);
             i++;
             j--;
         }else if(arr[i]+arr[j]<target){
