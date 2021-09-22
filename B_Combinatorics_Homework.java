@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-public class B_Effective_Approach {
+public class B_Combinatorics_Homework {
 
     static class FastReader
     {
@@ -61,40 +61,14 @@ public class B_Effective_Approach {
          FastReader f=new FastReader();
          StringBuilder sb=new StringBuilder();
          int t = f.nextInt();
-         String[] s=f.nextLine().split(" ");
-         int x=f.nextInt();
-         String[] g=f.nextLine().split(" ");
-         int a=0;
-         int b=0;
-         int c=0;
-         int d=0;
-         int i=0;
-         while(i<g.length){
-             for(int j=0;j<s.length;j++){
-                 if(i==g.length)break;
-                 int h=Integer.parseInt(s[j]);
-                 a++;
-                 if(h==Integer.parseInt(g[i])){
-                     c=a;
-                     i++;
-                    }
-                }
+         while(t-->0){
+            String[] s=f.nextLine().split(" ");
+            int ans=0;
+            for(int i=0;i<s.length-1;i++){
+                int x=Integer.parseInt(s[i]);
+                ans+=x-1;
             }
-            i=0;
-            while(i<g.length){
-                for(int j=s.length-1;j>=0;j--){
-                 if(i==g.length)break;
-                 int h=Integer.parseInt(s[j]);
-                 b++;
-                 if(h==Integer.parseInt(g[i])){
-                      d=b;
-                      i++;
-                 }
-             }
          }
-
-         System.out.println(c+" "+d);
-
     }
     }
 

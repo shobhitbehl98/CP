@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-public class B_Effective_Approach {
+public class C_Book {
 
     static class FastReader
     {
@@ -56,45 +56,52 @@ public class B_Effective_Approach {
             return str;
         }
     }
+
+    
     
     public static void main(String[] args){
          FastReader f=new FastReader();
          StringBuilder sb=new StringBuilder();
+        
          int t = f.nextInt();
-         String[] s=f.nextLine().split(" ");
-         int x=f.nextInt();
-         String[] g=f.nextLine().split(" ");
-         int a=0;
-         int b=0;
-         int c=0;
-         int d=0;
-         int i=0;
-         while(i<g.length){
-             for(int j=0;j<s.length;j++){
-                 if(i==g.length)break;
-                 int h=Integer.parseInt(s[j]);
-                 a++;
-                 if(h==Integer.parseInt(g[i])){
-                     c=a;
-                     i++;
-                    }
+         while(t-->0){
+            int v=f.nextInt();
+            ArrayList<ArrayList<Integer>> graph=new ArrayList<>();
+            for(int i=0;i<v;i++){
+               graph.add(new ArrayList<>());
+            }
+            for(int i=1;i<=v;i++){
+              String[] p=f.nextLine().split(" ");
+              for(int k=1;k<p.length;k++){
+                  int o=Integer.parseInt(p[k]);
+                  System.out.println(o+" "+i);
+                  graph.get(o).add(i);
+              }
+            }
+
+            Stack<Integer> st=new Stack<>();
+            boolean[] visited=new boolean[v];
+            for(int i=0;i<v;i++){
+                if(!visited[i]){
+                dfs(i,visited,st,graph);
                 }
             }
-            i=0;
-            while(i<g.length){
-                for(int j=s.length-1;j>=0;j--){
-                 if(i==g.length)break;
-                 int h=Integer.parseInt(s[j]);
-                 b++;
-                 if(h==Integer.parseInt(g[i])){
-                      d=b;
-                      i++;
-                 }
-             }
+
+            while(st.size()>0){
+                System.out.println(st.pop());
+            }
+                 
          }
+    }
+    public static void dfs(int i,boolean[] visited,Stack<Integer> st,ArrayList<ArrayList<Integer>> graph){
+         visited[i]=true;
 
-         System.out.println(c+" "+d);
-
+         for(int j=0;j<graph.get(i).size();j++){
+            if(!visited[j]){
+                dfs(graph.get(i).get(j),visited,st,graph);
+            }
+         }
+         st.push(i);
     }
     }
 

@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-public class B_Effective_Approach {
+public class B_Swaps {
 
     static class FastReader
     {
@@ -61,40 +61,31 @@ public class B_Effective_Approach {
          FastReader f=new FastReader();
          StringBuilder sb=new StringBuilder();
          int t = f.nextInt();
-         String[] s=f.nextLine().split(" ");
-         int x=f.nextInt();
-         String[] g=f.nextLine().split(" ");
-         int a=0;
-         int b=0;
-         int c=0;
-         int d=0;
-         int i=0;
-         while(i<g.length){
-             for(int j=0;j<s.length;j++){
-                 if(i==g.length)break;
-                 int h=Integer.parseInt(s[j]);
-                 a++;
-                 if(h==Integer.parseInt(g[i])){
-                     c=a;
-                     i++;
-                    }
+         while(t-->0){
+            int n=f.nextInt();
+            String[] a=f.nextLine().split(" ");
+            String[] b=f.nextLine().split(" ");
+            int[] num=new int[(2*n)+1];
+            for(int i=0;i<a.length;i++){
+              int an=Integer.parseInt(a[i]); 
+              int bn=Integer.parseInt(b[i]);
+              num[an]=i; 
+              num[bn]=i; 
+            }
+            int k=num.length;
+            for(int i=k-3;i>=0;i-=2){
+                if(num[i]>num[i+2]){
+                    num[i]=num[i+2];
                 }
             }
-            i=0;
-            while(i<g.length){
-                for(int j=s.length-1;j>=0;j--){
-                 if(i==g.length)break;
-                 int h=Integer.parseInt(s[j]);
-                 b++;
-                 if(h==Integer.parseInt(g[i])){
-                      d=b;
-                      i++;
-                 }
-             }
+            int ans=2*(n-1);
+            for(int i=1;i<num.length;i+=2){
+                ans=Math.min(ans,num[i]+num[i+1]);
+            }
+
+            sb.append(ans+"\n");
          }
-
-         System.out.println(c+" "+d);
-
+         System.out.println(sb);
     }
     }
 

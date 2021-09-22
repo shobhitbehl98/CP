@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-public class B_Effective_Approach {
+public class A_Regular_Bracket_Sequences {
 
     static class FastReader
     {
@@ -61,42 +61,32 @@ public class B_Effective_Approach {
          FastReader f=new FastReader();
          StringBuilder sb=new StringBuilder();
          int t = f.nextInt();
-         String[] s=f.nextLine().split(" ");
-         int x=f.nextInt();
-         String[] g=f.nextLine().split(" ");
-         int a=0;
-         int b=0;
-         int c=0;
-         int d=0;
-         int i=0;
-         while(i<g.length){
-             for(int j=0;j<s.length;j++){
-                 if(i==g.length)break;
-                 int h=Integer.parseInt(s[j]);
-                 a++;
-                 if(h==Integer.parseInt(g[i])){
-                     c=a;
-                     i++;
+         while(t-->0){
+           int r=f.nextInt();
+           ArrayList<ArrayList<String>> h=new ArrayList<>();
+           for(int i=0;i<r+1;i++){
+               if(i==0){
+                   h.add(new ArrayList<>());
+               }else if(i==1){
+                   ArrayList<String> al=new ArrayList<>();
+                   al.add("()");
+                   h.add(al);
+               }else{
+                   for(int j=i-1;j>=1;j--){
+                       for(int m=0;m<h.get(j).size();m++){
+                       for(int k=0;k<h.get(i-j).size();k++){
+                          sb.append(h.get(j).get(m)+h.get(i-j).get(k)+"\n");
+                       }
                     }
-                }
-            }
-            i=0;
-            while(i<g.length){
-                for(int j=s.length-1;j>=0;j--){
-                 if(i==g.length)break;
-                 int h=Integer.parseInt(s[j]);
-                 b++;
-                 if(h==Integer.parseInt(g[i])){
-                      d=b;
-                      i++;
-                 }
-             }
+                   }
+               }
+           }
          }
-
-         System.out.println(c+" "+d);
-
+         System.out.println(sb);
     }
+        
     }
+
 
 
     

@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-public class B_Effective_Approach {
+public class A_Countdown {
 
     static class FastReader
     {
@@ -61,40 +61,23 @@ public class B_Effective_Approach {
          FastReader f=new FastReader();
          StringBuilder sb=new StringBuilder();
          int t = f.nextInt();
-         String[] s=f.nextLine().split(" ");
-         int x=f.nextInt();
-         String[] g=f.nextLine().split(" ");
-         int a=0;
-         int b=0;
-         int c=0;
-         int d=0;
-         int i=0;
-         while(i<g.length){
-             for(int j=0;j<s.length;j++){
-                 if(i==g.length)break;
-                 int h=Integer.parseInt(s[j]);
-                 a++;
-                 if(h==Integer.parseInt(g[i])){
-                     c=a;
-                     i++;
+         while(t-->0){
+             int inp=f.nextInt();
+            String s=f.nextLine();
+            int ans=0;
+            for(int i=0;i<s.length();i++){
+                int y=s.charAt(i)-'0';
+                if(y!=0){
+                    if(i==s.length()-1){
+                       ans+=y;
+                    }else{
+                       ans+=y+1;
                     }
                 }
             }
-            i=0;
-            while(i<g.length){
-                for(int j=s.length-1;j>=0;j--){
-                 if(i==g.length)break;
-                 int h=Integer.parseInt(s[j]);
-                 b++;
-                 if(h==Integer.parseInt(g[i])){
-                      d=b;
-                      i++;
-                 }
-             }
+            sb.append(ans+"\n");
          }
-
-         System.out.println(c+" "+d);
-
+         System.out.println(sb);
     }
     }
 
