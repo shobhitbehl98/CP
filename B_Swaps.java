@@ -74,8 +74,16 @@ public class B_Swaps {
             for(int i=2,j=0;i<arr.length&&j<b.length;i+=2,j++){
                 int x=Integer.parseInt(b[j]);
                 arr[x]=j;
-                ans=Math.min(ans,(arr[x]+arr[x-1]));
             }
+            int minod=n;
+            for(int i=1;i<arr.length;i++){
+              if(i%2==1){
+                  minod=Math.min(minod,arr[i]);
+              }else{
+                  ans=Math.min(minod+arr[i],ans);
+              }
+            }
+
             sb.append(ans+"\n");
          }
          System.out.println(sb);
