@@ -63,12 +63,18 @@ public class B_Combinatorics_Homework {
          int t = f.nextInt();
          while(t-->0){
             String[] s=f.nextLine().split(" ");
-            int ans=0;
-            for(int i=0;i<s.length-1;i++){
-                int x=Integer.parseInt(s[i]);
-                ans+=x-1;
+            int[] arr={Integer.parseInt(s[0]),Integer.parseInt(s[1]),Integer.parseInt(s[2])};
+            Arrays.sort(arr);
+            int max=arr[0]+arr[1]+arr[2]-3;
+            int min=arr[2]-arr[1]-arr[0]-1;
+            int m=Integer.parseInt(s[3]);
+            if(m>=min&&m<=max){
+                sb.append("YES\n");
+            }else{
+                sb.append("NO\n");
             }
          }
+         System.out.println(sb);
     }
     }
 
