@@ -63,23 +63,22 @@ public class A_Regular_Bracket_Sequences {
          int t = f.nextInt();
          while(t-->0){
            int r=f.nextInt();
-           ArrayList<ArrayList<String>> h=new ArrayList<>();
-           for(int i=0;i<r+1;i++){
-               if(i==0){
-                   h.add(new ArrayList<>());
-               }else if(i==1){
-                   ArrayList<String> al=new ArrayList<>();
-                   al.add("()");
-                   h.add(al);
-               }else{
-                   for(int j=i-1;j>=1;j--){
-                       for(int m=0;m<h.get(j).size();m++){
-                       for(int k=0;k<h.get(i-j).size();k++){
-                          sb.append(h.get(j).get(m)+h.get(i-j).get(k)+"\n");
-                       }
-                    }
-                   }
-               }
+           String st="";
+           for(int i=0;i<r;i++){
+              for(int x=0;x<i;x++){
+                  st+="(";
+              }
+              for(int x=0;x<i;x++){
+                  st+=")";
+              }
+              for(int x=0;x<r-i;x++){
+                  st+="(";
+              }
+              for(int x=0;x<r-i;x++){
+                  st+=")";
+              }
+              sb.append(st+"\n");
+              st="";
            }
          }
          System.out.println(sb);
