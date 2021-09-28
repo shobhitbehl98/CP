@@ -1,3 +1,7 @@
+/*
+Find the max range and min range, max range would be A+B+C-1 and min range would be arr[2]-arr[1]-arr[0]-1 after sorting the array and if value of m is between min and max then print yes else no.
+*/
+
 import java.io.*;
 import java.util.*;
 public class B_Combinatorics_Homework {
