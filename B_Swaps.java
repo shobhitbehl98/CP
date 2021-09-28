@@ -65,24 +65,17 @@ public class B_Swaps {
             int n=f.nextInt();
             String[] a=f.nextLine().split(" ");
             String[] b=f.nextLine().split(" ");
-            int[] num=new int[(2*n)+1];
-            for(int i=0;i<a.length;i++){
-              int an=Integer.parseInt(a[i]); 
-              int bn=Integer.parseInt(b[i]);
-              num[an]=i; 
-              num[bn]=i; 
+            int[] arr=new int[(2*n)+1];
+            for(int i=1,j=0;i<arr.length&&j<a.length;i+=2,j++){
+                int x=Integer.parseInt(a[j]);
+                arr[x]=j;
             }
-            int k=num.length;
-            for(int i=k-3;i>=0;i-=2){
-                if(num[i]>num[i+2]){
-                    num[i]=num[i+2];
-                }
+            int ans=Integer.MAX_VALUE;
+            for(int i=2,j=0;i<arr.length&&j<b.length;i+=2,j++){
+                int x=Integer.parseInt(b[j]);
+                arr[x]=j;
+                ans=Math.min(ans,(arr[x]+arr[x-1]));
             }
-            int ans=2*(n-1);
-            for(int i=1;i<num.length;i+=2){
-                ans=Math.min(ans,num[i]+num[i+1]);
-            }
-
             sb.append(ans+"\n");
          }
          System.out.println(sb);
