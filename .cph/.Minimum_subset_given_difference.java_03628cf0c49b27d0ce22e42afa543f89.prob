@@ -1,1 +1,0 @@
-{"name":"Local: Minimum_subset_given_difference","url":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\Minimum_subset_given_difference.java","tests":[{"id":1629926970863,"input":"1\n4\n3 1 2 3\n3","output":"3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\Minimum_subset_given_difference.java","group":"local","local":true}
