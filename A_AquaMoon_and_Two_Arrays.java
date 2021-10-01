@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 public class A_AquaMoon_and_Two_Arrays {
 
-    static class FastReader
+    static class FastReader 
     {
         BufferedReader br;
         StringTokenizer st;

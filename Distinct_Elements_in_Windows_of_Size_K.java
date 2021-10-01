@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.*;
-public class A_Boy_or_Girl {
+//class CodeChef
+public class Distinct_Elements_in_Windows_of_Size_K {
 
     static class FastReader
     {
@@ -60,20 +61,41 @@ public class A_Boy_or_Girl {
     public static void main(String[] args){
          FastReader f=new FastReader();
          StringBuilder sb=new StringBuilder();
-         String x=f.nextLine();
-         HashSet<Character> h=new HashSet<>();
-         int ans=0;
-         for(int i=0;i<x.length();i++){
-             if(!h.contains(x.charAt(i))){
-                 ans++;
-                 h.add(x.charAt(i));
-             }
+         int t = f.nextInt();
+         int[] arr=new int[t];
+         for(int i=0;i<t;i++){
+            arr[i]=f.nextInt();
          }
+         int k=f.nextInt();
+         HashSet<Integer> hm=new HashSet<>();
+         int[] ans=new int[t-k+1];
+         int idx=0;
+         int d=0;
+         int m=0;
+         int i=0;
+         int r=0;
+         while(i<arr.length){
+             if(r==k){
+                 ans[idx]=d;
+                 idx++;
+                 d=0;
+                 hm=new HashSet<>();
+                 m++;
+                 i=m;
+                 r=0;
+                }
+                // System.out.println(arr[i]+" ");
+             if(!hm.contains(arr[i])){
+                 hm.add(arr[i]);
+                 d++;
+             }
+             i++;
+             r++;
+         }
+         ans[idx]=d;
 
-         if(ans%2==1){
-             System.out.println("IGNORE HIM!");
-         }else{
-             System.out.println("CHAT WITH HER!");
+         for(int j=0;j<ans.length;j++){
+             System.out.print(ans[j]+" ");
          }
     }
     }
