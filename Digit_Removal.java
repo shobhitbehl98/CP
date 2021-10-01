@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
-//class CodeChef
-public class Distinct_Elements_in_Windows_of_Size_K {
+// class CodeChef{
+public class Digit_Removal {
 
     static class FastReader
     {
@@ -61,37 +61,47 @@ public class Distinct_Elements_in_Windows_of_Size_K {
     public static void main(String[] args){
          FastReader f=new FastReader();
          StringBuilder sb=new StringBuilder();
-         int t=f.nextInt();
-         int[] arr=new int[t];
-         for(int i=0;i<t;i++){
-           arr[i]=f.nextInt();
-         }
-         int k=f.nextInt();
-         HashMap<Integer,Integer> hm=new HashMap<>();
-         ArrayList<Integer> li=new ArrayList<>();
-         for(int i=0;i<t;i++){
-             if(!hm.containsKey(arr[i])){
-                 hm.put(arr[i],1);
-             }else{
-                  hm.put(arr[i],hm.get(arr[i])+1);
-             }
-             if(i>=k-1){
-               li.add(hm.size());
-               int y=hm.get(arr[i-k+1]);
-               y--;
-               if(y==0){
-                   hm.remove(arr[i-k+1]);
-               }else{
-                  hm.put(arr[i-k+1],y);
-               }
-             }
-         }
-         for(int i=0;i<li.size();i++){
-             System.out.print(li.get(i)+" ");
-         }
+         int t = f.nextInt();
+         while(t-->0){
+            String[] n=f.nextLine().split(" ");
+            long a=Long.parseLong(n[0]);
+            int b=Integer.parseInt(n[1]);
+            ArrayList<Integer> l=new ArrayList<>();
+            int j=n[0].length()-1;
+            for(int i=0;i<n[0].length();i++){
+                if(n[0].charAt(i)-'0'==b){
+                    l.add(j);
+                }
+                j--;
+            }
+            if(l.size()==0){
+                sb.append(0+"\n");
+            }else if(l.get(0)==0){
+                sb.append(1+"\n");
+            }else{
+                if(b!=0){
+                   int h=l.get(0);
+                   long k=((b+1)*(long)Math.pow(10,h));
+                   long m=Long.parseLong(n[0].substring(n[0].length()-h-1));
+                   System.out.println(k+" "+m);
+                   sb.append((k-m)+"\n");
 
+                }else{
+                    long ans=0;
+                   for(int e=0;e<l.size();e++){
+                    long k=((b+1)*(long)Math.pow(10,l.get(e)));
+                    ans+=k;
+                   }
+                   sb.append(ans+"\n");
+                }
+            }
+            
+        }
+        System.out.print(sb);
     }
+         
     }
+    
 
 
     

@@ -4,6 +4,6 @@
         "."
     ],
     "files.defaultLanguage": "java",
-    "cph.general.defaultLanguage": "java",
+    "cph.general.defaultLanguage": "none",
     "cph.general.defaultLanguageTemplateFileLocation": "C:\\Users\\Shobh\\Desktop\\Coding\\cp\\java_template.java"
 }

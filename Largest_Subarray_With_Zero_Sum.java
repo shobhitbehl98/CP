@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 //class CodeChef
-public class Distinct_Elements_in_Windows_of_Size_K {
+public class Largest_Subarray_With_Zero_Sum {
 
     static class FastReader
     {
@@ -61,35 +61,27 @@ public class Distinct_Elements_in_Windows_of_Size_K {
     public static void main(String[] args){
          FastReader f=new FastReader();
          StringBuilder sb=new StringBuilder();
-         int t=f.nextInt();
+         int t = f.nextInt();
          int[] arr=new int[t];
-         for(int i=0;i<t;i++){
-           arr[i]=f.nextInt();
+         for(int i=0;i<arr.length;i++){
+               arr[i]=f.nextInt();
          }
-         int k=f.nextInt();
          HashMap<Integer,Integer> hm=new HashMap<>();
-         ArrayList<Integer> li=new ArrayList<>();
-         for(int i=0;i<t;i++){
-             if(!hm.containsKey(arr[i])){
-                 hm.put(arr[i],1);
+         int sum=0;
+         int max=0;
+         hm.put(0,-1);
+         for(int i=0;i<arr.length;i++){
+             sum+=arr[i];
+             if(hm.containsKey(sum)){
+                 max=Math.max(max,(i-hm.get(sum)));
              }else{
-                  hm.put(arr[i],hm.get(arr[i])+1);
+                 hm.put(sum,i);
              }
-             if(i>=k-1){
-               li.add(hm.size());
-               int y=hm.get(arr[i-k+1]);
-               y--;
-               if(y==0){
-                   hm.remove(arr[i-k+1]);
-               }else{
-                  hm.put(arr[i-k+1],y);
-               }
-             }
-         }
-         for(int i=0;i<li.size();i++){
-             System.out.print(li.get(i)+" ");
          }
 
+	
+
+         System.out.println(max);
     }
     }
 
