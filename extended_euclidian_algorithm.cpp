@@ -41,5 +41,4 @@ int main() {
     triplet e=ext(a,b);
     cout<<e.x<<" "<<e.y<<" "<<e.gcd;
    return 0; 
-   
 }
