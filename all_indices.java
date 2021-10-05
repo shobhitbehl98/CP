@@ -1,7 +1,9 @@
+/* Author shobhit_behl */
+
 import java.io.*;
 import java.util.*;
-// class CodeChef{
-public class Digit_Removal {
+//class CodeChef
+public class all_indices {
 
     static class FastReader
     {
@@ -62,39 +64,35 @@ public class Digit_Removal {
          FastReader f=new FastReader();
          StringBuilder sb=new StringBuilder();
          int t = f.nextInt();
-         while(t-->0){
-            String[] n=f.nextLine().split(" ");
-            long a=Long.parseLong(n[0]);
-            ArrayList<Integ
-            int b=Integer.parseInt(n[1]);
-            int z=-1;
-            for(int i=0;i<n[0].length();i++){
-                if(n[0].charAt(i)-'0'==b){
-                    z=i;
-                    break;
-                }
-            }
-            
-            if(z==-1){
-                sb.append(0+"\n");
-            }else{
-              ArrayList<Integer> li=new ArrayList<>();
-              if(b==0){
-                 for(int i=arr.length;i>=0;i--){
-                     if(arr[i]==||arr[i]==1){
-                         li.add(0,1-arr[i])
-                     }
-                 }
-              } 
-              
-             }
-        
+         String[] s=f.nextLine().split(" ");
+         int k=f.nextInt();
+         int[] arr=new int[t];
+         for(int i=0;i<t;i++){
+             arr[i]=Integer.parseInt(s[i]);
+         }
+         int[] finalans=allind(arr,0,0,k);
+
+         for(int i=0;i<finalans.length;i++){
+             System.out.print(finalans[i]+" ");
+         }
     }
-    System.out.print(sb);
-}
 
-}
+    public static int[] allind(int[] arr,int i,int size,int tar){
+        if(i==arr.length){
+            int[] base=new int[size];
+            return base;
+        }
+        if(arr[i]==tar){
+            size++;
+        }
 
+        int[] ans=allind(arr,i+1,size,tar);
+        if(arr[i]==tar){
+        ans[size-1]=i;
+        }
+        return ans;
+    }
+    }
 
 
     

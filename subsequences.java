@@ -1,7 +1,9 @@
+/* Author shobhit_behl */
+
 import java.io.*;
 import java.util.*;
-// class CodeChef{
-public class Digit_Removal {
+//class CodeChef
+public class subsequences {
 
     static class FastReader
     {
@@ -61,40 +63,22 @@ public class Digit_Removal {
     public static void main(String[] args){
          FastReader f=new FastReader();
          StringBuilder sb=new StringBuilder();
-         int t = f.nextInt();
-         while(t-->0){
-            String[] n=f.nextLine().split(" ");
-            long a=Long.parseLong(n[0]);
-            ArrayList<Integ
-            int b=Integer.parseInt(n[1]);
-            int z=-1;
-            for(int i=0;i<n[0].length();i++){
-                if(n[0].charAt(i)-'0'==b){
-                    z=i;
-                    break;
-                }
-            }
-            
-            if(z==-1){
-                sb.append(0+"\n");
-            }else{
-              ArrayList<Integer> li=new ArrayList<>();
-              if(b==0){
-                 for(int i=arr.length;i>=0;i--){
-                     if(arr[i]==||arr[i]==1){
-                         li.add(0,1-arr[i])
-                     }
-                 }
-              } 
-              
-             }
-        
+         String s=f.nextLine();
+         sub(s,"");
     }
-    System.out.print(sb);
-}
 
-}
-
+    public static void sub(String s,String ans){
+         if(s.length()==0){
+             System.out.println(ans);
+             return;
+         }
+         char ch=s.charAt(0);
+         String roq=s.substring(1);
+         sub(roq,ans+ch);
+         sub(roq,ans);
+         
+    }
+    }
 
 
     

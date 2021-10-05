@@ -1,7 +1,9 @@
+/* Author shobhit_behl */
+
 import java.io.*;
 import java.util.*;
-// class CodeChef{
-public class Digit_Removal {
+//class CodeChef
+public class floodfill {
 
     static class FastReader
     {
@@ -61,40 +63,36 @@ public class Digit_Removal {
     public static void main(String[] args){
          FastReader f=new FastReader();
          StringBuilder sb=new StringBuilder();
-         int t = f.nextInt();
-         while(t-->0){
-            String[] n=f.nextLine().split(" ");
-            long a=Long.parseLong(n[0]);
-            ArrayList<Integ
-            int b=Integer.parseInt(n[1]);
-            int z=-1;
-            for(int i=0;i<n[0].length();i++){
-                if(n[0].charAt(i)-'0'==b){
-                    z=i;
-                    break;
-                }
-            }
-            
-            if(z==-1){
-                sb.append(0+"\n");
-            }else{
-              ArrayList<Integer> li=new ArrayList<>();
-              if(b==0){
-                 for(int i=arr.length;i>=0;i--){
-                     if(arr[i]==||arr[i]==1){
-                         li.add(0,1-arr[i])
-                     }
-                 }
-              } 
-              
-             }
-        
+         int n=f.nextInt();
+         int m=f.nextInt();
+         int x=f.nextInt();
+         int y=f.nextInt();
+        //  System.out.println(n+" "+m+" "+x+" "+y);
+         boolean[][] visited=new boolean[n][m];
+         getp(0,0,x,y,n-1,m-1,visited,"");
     }
-    System.out.print(sb);
-}
 
-}
-
+    public static void getp(int i,int j,int x,int y,int n,int m,boolean[][] visited,String ans){
+        if(i==x && j==y){
+            System.out.println(ans);
+            return;
+        }
+        visited[i][j]=true;
+        if(i-1>=0&&!visited[i-1][j]){
+             getp(i-1,j,x,y,n,m,visited,ans+"U ");
+        }
+        if(j+1<=m&&!visited[i][j+1]){
+             getp(i,j+1,x,y,n,m,visited,ans+"R ");
+        }
+        if(i+1<=n&&!visited[i+1][j]){
+             getp(i+1,j,x,y,n,m,visited,ans+"D ");
+        }
+        if(j-1>=0&&!visited[i][j-1]){
+             getp(i,j-1,x,y,n,m,visited,ans+"L ");
+        }
+        visited[i][j]=false;
+    }
+    }
 
 
     
