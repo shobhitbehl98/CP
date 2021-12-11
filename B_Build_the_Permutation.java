@@ -54,52 +54,46 @@ public class B_Build_the_Permutation {
             int n = Integer.parseInt(s[0]);
             int a = Integer.parseInt(s[1]);
             int b = Integer.parseInt(s[2]);
-            if (Math.abs(a - b) > 1 || n < 3||(a==0&&b!=0)||(a!=0&&b==0)||a+b>(n-2)) {
+            if (Math.abs(a - b) > 1  || a + b > (n - 2)) {
                 sb.append(-1 + "\n");
                 continue;
             }
-            int i = 1;
-            int j = n;
-            if (a >= b) {
-                while (i < j) {
-                    if (a == 0) {
-                        while (i <= j) {
-                            sb.append(i + " ");
-                            i++;
-                        }
-                        break;
-                    }
-                    sb.append(i + " " + j + " ");
-                    i++;
-                    j--;
-                    a--;
-                }
-                if (i == j) {
-                    sb.append(i + " ");
-                    i++;
-                    j--;
-                }
-            } else {
-                while (i < j) {
-                    if (b == 0) {
-                        while (i <= j) {
-                            sb.append(i + " ");
-                            i++;
-                        }
-                        break;
-                    }
-                    sb.append(j + " " + i + " ");
-                    i++;
-                    j--;
-                    b--;
-                }
-                if (i == j) {
-                    sb.append(i + " ");
-                    i++;
-                    j--;
-                }
-            }
-            sb.append("\n");
+           int[] arr=new int[n];
+           for(int i=0;i<arr.length;i++){
+               arr[i]=i+1;
+           }
+            
+           if(a>b){
+            int v=arr.length-1;
+            while(a>0){
+              int temp=arr[v];
+              arr[v]=arr[v-1];
+              arr[v-1]=temp;
+              v-=2;
+              a--;
+            } 
+           }else if(b>=a){
+             int v=0;
+             int u=b;
+             while(u>0){
+               int temp=arr[v];
+               arr[v]=arr[v+1];
+               arr[v+1]=temp;
+               v+=2;
+               u--;
+             }
+             if(b==a&&b>0){
+                 int m=arr[arr.length-1];
+                 arr[arr.length-1]=arr[arr.length-2];
+                 arr[arr.length-2]=m;
+             }
+           }
+
+           for(int val:arr){
+               sb.append(val+" ");
+           }
+           sb.append("\n");
+
         }
         System.out.println(sb);
     }
