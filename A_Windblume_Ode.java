@@ -1,7 +1,9 @@
+/* Author shobhit_behl */
+
 import java.io.*;
 import java.util.*;
 //class CodeChef
-public class extended_euclidian_algorithm {
+public class A_Windblume_Ode {
 
     static class FastReader
     {
@@ -57,34 +59,50 @@ public class extended_euclidian_algorithm {
             return str;
         }
     }
-    public static class tri{
-        int x;
-        int y;
-        int gcd;
-
-        tri(int x,int y,int gcd){
-            this.x=x;
-            this.y=y;
-            this.gcd=gcd;
-        }
-    }
-    public static tri ext(int a,int b){
-       if(b==0){
-           tri base=new tri(1,0,a);
-           return base;
-       }
-k
-       tri small=ext(b,a%b);
-       tri ans=new tri(small.y,small.x-(a/b)*small.y,small.gcd);
-       return ans;
-    }
+    
     public static void main(String[] args){
          FastReader f=new FastReader();
-         int a=f.nextInt();
-         int b=f.nextInt();
-         tri ans=ext(a,b);
-         System.out.println(ans.x+" "+ans.y+" "+ans.gcd);
-         
+         StringBuilder sb=new StringBuilder();
+         int t = f.nextInt();
+         boolean[] sie=new boolean[20001];
+         for(int i=2;i*i<20001;i++){
+            if(!sie[i]){
+                int k=2;
+                while(i*k<sie.length){
+                    sie[i*k]=true;
+                    k++;
+                }
+            }
+         }
+         while(t-->0){
+             int n=f.nextInt();
+             int[] arr=new int[n];
+             int[] ab=new int[n];
+             for(int i=0;i<arr.length;i++){
+                 arr[i]=f.nextInt();
+                }
+                ab[0]=arr[0];
+                for(int i=1;i<ab.length;i++){
+                    ab[i]=ab[i-1]+arr[i];
+                }
+             for(int i=ab.length-1;i>=0;i--){
+                  if(sie[ab[i]]){
+                      sb.append(i+1+"\n");
+                      break;
+                  }else{
+                      int u=i;
+                      while(u>=0&&!sie[ab[i]-arr[u]]){
+                          u--;
+                      }
+                      if(u>=0){
+                          sb.append(i+"\n"+);
+                          break;
+                      }
+                  }
+             }
+
+         }
+         System.out.println(sb);
     }
     }
 

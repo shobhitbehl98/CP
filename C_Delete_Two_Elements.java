@@ -1,7 +1,9 @@
+/* Author shobhit_behl */
+
 import java.io.*;
 import java.util.*;
 //class CodeChef
-public class extended_euclidian_algorithm {
+public class C_Delete_Two_Elements {
 
     static class FastReader
     {
@@ -57,34 +59,51 @@ public class extended_euclidian_algorithm {
             return str;
         }
     }
-    public static class tri{
-        int x;
-        int y;
-        int gcd;
-
-        tri(int x,int y,int gcd){
-            this.x=x;
-            this.y=y;
-            this.gcd=gcd;
-        }
-    }
-    public static tri ext(int a,int b){
-       if(b==0){
-           tri base=new tri(1,0,a);
-           return base;
-       }
-k
-       tri small=ext(b,a%b);
-       tri ans=new tri(small.y,small.x-(a/b)*small.y,small.gcd);
-       return ans;
-    }
+    
     public static void main(String[] args){
          FastReader f=new FastReader();
-         int a=f.nextInt();
-         int b=f.nextInt();
-         tri ans=ext(a,b);
-         System.out.println(ans.x+" "+ans.y+" "+ans.gcd);
-         
+         StringBuilder sb=new StringBuilder();
+         int t = f.nextInt();
+         while(t-->0){
+            int n=f.nextInt();
+            int[] arr=new int[n];
+            int sum=0;
+            for(int i=0;i<arr.length;i++){
+                arr[i]=f.nextInt();
+                sum+=arr[i];
+            }
+            double h=(1.0*sum/arr.length)*2;
+            Arrays.sort(arr);
+            int i=0;
+            int j=arr.length-1;
+            int c=0;
+            while(i<j){
+                double g=(1.0*(arr[i]+arr[j]));
+
+             if(g==h){
+                 c++;
+                 int z=j-1;
+                 while(i<z&&arr[z]==arr[j]){
+                     c++;
+                     z--;
+                 }
+                 int e=i+1;
+                 while(e<j&&arr[e]==arr[i]){
+                     c++;
+                     e++;
+                 }
+                 i++;
+                 j--;
+             }else if(g<h){
+                 i++;
+             }else if(g>h){
+                 j--;
+             }
+
+            }
+            sb.append(c+"\n");
+        }
+        System.out.println(sb);
     }
     }
 

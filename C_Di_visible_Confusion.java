@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
-//class CodeChef
-public class extended_euclidian_algorithm {
+// class CodeChef{
+public class C_Di_visible_Confusion {
 
     static class FastReader
     {
@@ -57,34 +57,25 @@ public class extended_euclidian_algorithm {
             return str;
         }
     }
-    public static class tri{
-        int x;
-        int y;
-        int gcd;
-
-        tri(int x,int y,int gcd){
-            this.x=x;
-            this.y=y;
-            this.gcd=gcd;
-        }
-    }
-    public static tri ext(int a,int b){
-       if(b==0){
-           tri base=new tri(1,0,a);
-           return base;
-       }
-k
-       tri small=ext(b,a%b);
-       tri ans=new tri(small.y,small.x-(a/b)*small.y,small.gcd);
-       return ans;
-    }
+    
     public static void main(String[] args){
          FastReader f=new FastReader();
-         int a=f.nextInt();
-         int b=f.nextInt();
-         tri ans=ext(a,b);
-         System.out.println(ans.x+" "+ans.y+" "+ans.gcd);
-         
+         StringBuilder sb=new StringBuilder();
+         int t = f.nextInt();
+         while(t-->0){
+           int n=f.nextInt();
+           int[] arr=new int[n];
+           for(int i=0;i<n;i++){
+               arr[i]=f.nextInt();
+           }
+
+           if(arr[0]%2!=0){
+               sb.append("YES\n");
+           }else{
+               sb.append("NO\n");
+           }
+         }
+         System.out.println(sb);
     }
     }
 

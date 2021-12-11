@@ -1,7 +1,9 @@
+/* Author shobhit_behl */
+
 import java.io.*;
 import java.util.*;
 //class CodeChef
-public class extended_euclidian_algorithm {
+public class Solution {
 
     static class FastReader
     {
@@ -57,33 +59,35 @@ public class extended_euclidian_algorithm {
             return str;
         }
     }
-    public static class tri{
-        int x;
-        int y;
-        int gcd;
-
-        tri(int x,int y,int gcd){
-            this.x=x;
-            this.y=y;
-            this.gcd=gcd;
-        }
-    }
-    public static tri ext(int a,int b){
-       if(b==0){
-           tri base=new tri(1,0,a);
-           return base;
-       }
-k
-       tri small=ext(b,a%b);
-       tri ans=new tri(small.y,small.x-(a/b)*small.y,small.gcd);
-       return ans;
-    }
+    
     public static void main(String[] args){
          FastReader f=new FastReader();
-         int a=f.nextInt();
-         int b=f.nextInt();
-         tri ans=ext(a,b);
-         System.out.println(ans.x+" "+ans.y+" "+ans.gcd);
+         StringBuilder sb=new StringBuilder();
+         int b = f.nextInt();
+         int p = f.nextInt();
+         int[] prices=new int[b+1];
+         int[] pages=new int[b+1];
+         for(int i=1;i<prices.length;i++){
+             prices[i]=f.nextInt();
+         }
+         for(int i=1;i<pages.length;i++){
+             pages[i]=f.nextInt();
+         }
+
+         int[][] dp=new int[prices.length][p+1];
+         for(int i=1;i<dp.length;i++){
+             for(int j=1;j<dp[0].length;j++){
+                 dp[i][j]=dp[i-1][j];
+                 if(j-prices[i]>=0){
+                     dp[i][j]=Math.max(dp[i][j],pages[i]+dp[i-1][j-prices[i]]);
+                 }
+             }
+         }
+
+
+         System.out.println(dp[dp.length-1][dp[0].length-1]);
+
+
          
     }
     }
