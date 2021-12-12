@@ -1,8 +1,3 @@
-/**
- * author: derrick20
- * created: 4/17/21 6:47 PM
- * Codeforces F copied Problem from Atcoder Contest checking a random soln if it works.
- */
 import java.io.*;
 import java.util.*;
 import static java.lang.Math.*;
