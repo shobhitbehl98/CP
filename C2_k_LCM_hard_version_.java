@@ -1,6 +1,5 @@
 import java.io.*;
 import java.util.*;
-// class CodeChef{
 public class C2_k_LCM_hard_version_ {
 
     static class FastReader
@@ -63,35 +62,32 @@ public class C2_k_LCM_hard_version_ {
          StringBuilder sb=new StringBuilder();
          int t = f.nextInt();
          while(t-->0){
-            String[] s=f.nextLine().split(" ");
-            int n=Integer.parseInt(s[0]);
-            int k=Integer.parseInt(s[1]);
+            int n=f.nextInt();
+            int k=f.nextInt();
             while(k>3){
                 sb.append(1+" ");
                 k--;
+                n--;
             }
-            if (n % 2 == 1) {
-                sb.append(n / 2 + " ");
-                sb.append(n / 2 + " ");
-                sb.append(1 + "\n");
-            } else {
-                int y = n / 2;
-                if (y % 2 == 0) {
-                    sb.append(y + " ");
-                    sb.append(y / 2 + " ");
-                    sb.append(y / 2 + "\n");
-                } else {
-                    sb.append(2 + " ");
-                    sb.append(y - 1 + " ");
-                    sb.append(y - 1 + "\n");
-
+            
+            if(n%2==0){
+                if(n%4==0){
+                    
+                  sb.append(n/2+" "+n/4+" "+n/4+"\n");
+                }else{
+                int j=(n-2)/2;
+                sb.append(2+" "+j+" "+j+"\n");
                 }
+            }else{
+                int j=(n-1)/2;
+                sb.append(1+" "+j+" "+j+"\n");
+            }
             }
             System.out.println(sb);
                  
          }
     }
-    }
+    
 
 
     

@@ -1,75 +1,86 @@
 import java.io.*;
 import java.util.*;
-
 public class C1_k_LCM_easy_version_ {
 
-    static class FastReader {
+    static class FastReader
+    {
         BufferedReader br;
         StringTokenizer st;
-
-        public FastReader() {
-            br = new BufferedReader(new InputStreamReader(System.in));
+ 
+        public FastReader()
+        {
+            br = new BufferedReader(new
+                    InputStreamReader(System.in));
         }
-
-        String next() {
-            while (st == null || !st.hasMoreElements()) {
-                try {
+ 
+        String next()
+        {
+            while (st == null || !st.hasMoreElements())
+            {
+                try
+                {
                     st = new StringTokenizer(br.readLine());
-                } catch (IOException e) {
+                }
+                catch (IOException  e)
+                {
                     e.printStackTrace();
                 }
             }
             return st.nextToken();
         }
-
-        int nextInt() {
+        int nextInt()
+        {
             return Integer.parseInt(next());
         }
-
-        long nextLong() {
+ 
+        long nextLong()
+        {
             return Long.parseLong(next());
         }
-
-        double nextDouble() {
+ 
+        double nextDouble()
+        {
             return Double.parseDouble(next());
         }
-
-        String nextLine() {
+        String nextLine()
+        {
             String str = "";
-            try {
+            try
+            {
                 str = br.readLine();
-            } catch (IOException e) {
+            }
+            catch (IOException e)
+            {
                 e.printStackTrace();
             }
             return str;
         }
     }
-
-    public static void main(String[] args) {
-        FastReader f = new FastReader();
-        StringBuilder sb = new StringBuilder();
-        int t = f.nextInt();
-        while (t-- > 0) {
-            String[] s = f.nextLine().split(" ");
-            int n = Integer.parseInt(s[0]);
-            if (n % 2 == 1) {
-                sb.append(n / 2 + " ");
-                sb.append(n / 2 + " ");
-                sb.append(1 + "\n");
-            } else {
-                int y = n / 2;
-                if (y % 2 == 0) {
-                    sb.append(y + " ");
-                    sb.append(y / 2 + " ");
-                    sb.append(y / 2 + "\n");
-                } else {
-                    sb.append(2 + " ");
-                    sb.append(y - 1 + " ");
-                    sb.append(y - 1 + "\n");
-
+    
+    public static void main(String[] args){
+         FastReader f=new FastReader();
+         StringBuilder sb=new StringBuilder();
+         int t = f.nextInt();
+         while(t-->0){
+            int n=f.nextInt();
+            int k=f.nextInt();
+            if(n%2==0){
+                if(n%4==0){
+                  sb.append(n/2+" "+n/4+" "+n/4+"\n");
+                }else{
+                int j=(n-2)/2;
+                sb.append(2+" "+j+" "+j+"\n");
                 }
+            }else{
+                int j=(n-1)/2;
+                sb.append(1+" "+j+" "+j+"\n");
             }
-        }
-        System.out.println(sb);
+                 
+         }
+         System.out.println(sb);
     }
-}
+    }
+
+
+    
+

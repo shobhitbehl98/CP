@@ -71,6 +71,8 @@ public class insertionSort {
             for (int val : arr) {
                 System.out.print(val + " ");
             }
+            HashMap<Integer,Integer> h=new HashMap<>();
+            h.put(0,h.getOrDefault(0, 0)+1)
             System.out.println();
         }
     }
