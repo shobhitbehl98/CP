@@ -3,7 +3,7 @@
 import java.io.*;
 import java.util.*;
 class CodeChef{
-// public class Count_Number_of_Peaks {
+// public class Again_XOR_problem {
 
     static class FastReader
     {
@@ -65,48 +65,43 @@ class CodeChef{
          StringBuilder sb=new StringBuilder();
          int t = f.nextInt();
          while(t-->0){
-            int n=f.nextInt();
-            aal=new ArrayList<>();
-            ArrayList<Integer> a=new ArrayList<>();
-            rec(n,a);
-            int m=0;
-            for(int i=0;i<aal.size();i++){
-                // System.out.println(aal.get(i).size());
-                if(aal.get(i).size()<3){
-                    continue;
+             int n=f.nextInt();
+             int k=f.nextInt();
+             char[] s=f.nextLine().toCharArray();
+             int ans=0;
+             int xo=0;
+             for(int i=0;i<=n-k;i++){
+                 xo^=s[i]-'0';
                 }
-                for(int j=1;j<aal.get(i).size()-1;j++){
-                    // System.out.println(aal.get(i).get(j-1)+" "+aal.get(i).get(j)+" "+aal.get(i).get(j+1)+"  "+i+"  "+j);
-                    if((aal.get(i).get(j-1)<aal.get(i).get(j)&&aal.get(i).get(j+1)<aal.get(i).get(j))||(aal.get(i).get(j-1)>aal.get(i).get(j)&&aal.get(i).get(j+1)>aal.get(i).get(j))){
-                        m++;
-                    }
+                if(xo==1){
+                    ans++;
                 }
-            }
-            System.out.println(m);     
+             int b=0;
+             int e=n-k+1;
+             while(e<n){
+                 xo^=(s[b++]-'0');
+                 xo^=(s[e++]-'0');
+                 if(xo==1){
+                     ans++;
+                 }
+             }
+             System.out.println(ans); 
+         }
+    }
+
+    public static int bintoint(String g){
+        int k=0;
+        int val=0;
+         for(int i=g.length()-1;i>=0;i--){
+             char ch=g.charAt(i);
+             if(ch=='1'){
+                val+=(int)Math.pow(2,k);
+             }
+             k++;
          }
 
+         return val;
 
-    }
-    public static ArrayList<ArrayList<Integer>> aal;
-    public static void rec(int n,ArrayList<Integer> al){
-        if(n==0){
-            ArrayList<Integer> base=new ArrayList<>();
-            for(int i=0;i<al.size();i++){
-                   base.add(al.get(i));
-            }
-            aal.add(base);
-            return; 
-        }
-        al.add(0);
-        rec(n-1,al);
-        al.remove(al.size()-1);
-        al.add(1);
-        rec(n-1,al);
-        al.remove(al.size()-1);
-        al.add(2);
-        rec(n-1,al);
-        al.remove(al.size()-1);
-        
     }
     }
 
