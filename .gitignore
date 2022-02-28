@@ -1,4 +1,4 @@
-.cph
-node_modules
-.vscode
-io
+.cph/
+node_modules/
+.vscode/
+io./
