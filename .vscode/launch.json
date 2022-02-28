@@ -1,0 +1,574 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch A",
+            "request": "launch",
+            "mainClass": "A",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch A_AquaMoon_and_Two_Arrays",
+            "request": "launch",
+            "mainClass": "A_AquaMoon_and_Two_Arrays",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch A_PizzaForces",
+            "request": "launch",
+            "mainClass": "A_PizzaForces",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch A_Shortest_Path_with_Obstacle",
+            "request": "launch",
+            "mainClass": "A_Shortest_Path_with_Obstacle",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Arithmetic_Square",
+            "request": "launch",
+            "mainClass": "Arithmetic_Square",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch As_Far_From_Land_As_Possible",
+            "request": "launch",
+            "mainClass": "As_Far_From_Land_As_Possible",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch B_Alphabetical_Strings",
+            "request": "launch",
+            "mainClass": "B_Alphabetical_Strings",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch B_AquaMoon_and_Stolen_String",
+            "request": "launch",
+            "mainClass": "B_AquaMoon_and_Stolen_String",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch B_Bad_Boy",
+            "request": "launch",
+            "mainClass": "B_Bad_Boy",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Bellman_Ford",
+            "request": "launch",
+            "mainClass": "Bellman_Ford",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Binary_String_on_Steroids",
+            "request": "launch",
+            "mainClass": "Binary_String_on_Steroids",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Binary_Tree_Construction",
+            "request": "launch",
+            "mainClass": "Binary_Tree_Construction",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Bottom_view_of_a_binary_tree",
+            "request": "launch",
+            "mainClass": "Bottom_view_of_a_binary_tree",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch C_Challenging_Cliffs",
+            "request": "launch",
+            "mainClass": "C_Challenging_Cliffs",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch C_Pair_Programming",
+            "request": "launch",
+            "mainClass": "C_Pair_Programming",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Cameras_in_a_BinaryTree",
+            "request": "launch",
+            "mainClass": "Cameras_in_a_BinaryTree",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Chef_and_Queries",
+            "request": "launch",
+            "mainClass": "Chef_and_Queries",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Chef_vs_Bharat",
+            "request": "launch",
+            "mainClass": "Chef_vs_Bharat",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Chef_vs_Bharat_partial",
+            "request": "launch",
+            "mainClass": "Chef_vs_Bharat_partial",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch CodeChef",
+            "request": "launch",
+            "mainClass": "CodeChef",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Codechef",
+            "request": "launch",
+            "mainClass": "Codechef",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch College_Life_5",
+            "request": "launch",
+            "mainClass": "College_Life_5",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Construction_of_a_GenericTree",
+            "request": "launch",
+            "mainClass": "Construction_of_a_GenericTree",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Count_Distinct_Palindromic_Subsequence",
+            "request": "launch",
+            "mainClass": "Count_Distinct_Palindromic_Subsequence",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Count_Palindromic_Substring",
+            "request": "launch",
+            "mainClass": "Count_Palindromic_Substring",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch D_Deleting_Divisors",
+            "request": "launch",
+            "mainClass": "D_Deleting_Divisors",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Diagonal_anticlock_binary_tree",
+            "request": "launch",
+            "mainClass": "Diagonal_anticlock_binary_tree",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Diagonal_binary_tree",
+            "request": "launch",
+            "mainClass": "Diagonal_binary_tree",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch E_You",
+            "request": "launch",
+            "mainClass": "E_You",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Increasing_Array",
+            "request": "launch",
+            "mainClass": "Increasing_Array",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Josepheus_Problem",
+            "request": "launch",
+            "mainClass": "Josepheus_Problem",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch K_Path_Query",
+            "request": "launch",
+            "mainClass": "K_Path_Query",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Kosaraju_Algorithm",
+            "request": "launch",
+            "mainClass": "Kosaraju_Algorithm",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Left_View_of_a_Binary_Tree",
+            "request": "launch",
+            "mainClass": "Left_View_of_a_Binary_Tree",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Longest_palindromic_subsequence",
+            "request": "launch",
+            "mainClass": "Longest_palindromic_subsequence",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Longest_palindromic_substring",
+            "request": "launch",
+            "mainClass": "Longest_palindromic_substring",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Martians_Genome",
+            "request": "launch",
+            "mainClass": "Martians_Genome",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Maximum_Production",
+            "request": "launch",
+            "mainClass": "Maximum_Production",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Merge_Two_Sorted_LinkedList",
+            "request": "launch",
+            "mainClass": "Merge_Two_Sorted_LinkedList",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Mimimum_Cost_to_Connect_All_Cities",
+            "request": "launch",
+            "mainClass": "Mimimum_Cost_to_Connect_All_Cities",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Missing_Number",
+            "request": "launch",
+            "mainClass": "Missing_Number",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Moksh_and_his_gf",
+            "request": "launch",
+            "mainClass": "Moksh_and_his_gf",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Mother_Vertex",
+            "request": "launch",
+            "mainClass": "Mother_Vertex",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch NQueens_BB",
+            "request": "launch",
+            "mainClass": "NQueens_BB",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Negative_wt_cycle_detection",
+            "request": "launch",
+            "mainClass": "Negative_wt_cycle_detection",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Optimal_Denomination",
+            "request": "launch",
+            "mainClass": "Optimal_Denomination",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Pepcoding_Course_Schedule",
+            "request": "launch",
+            "mainClass": "Pepcoding_Course_Schedule",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Permutations",
+            "request": "launch",
+            "mainClass": "Permutations",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Print_01_Knapsack",
+            "request": "launch",
+            "mainClass": "Print_01_Knapsack",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Remember_Password",
+            "request": "launch",
+            "mainClass": "Remember_Password",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Repetitions",
+            "request": "launch",
+            "mainClass": "Repetitions",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Right_View_of_a_Binary_Tree",
+            "request": "launch",
+            "mainClass": "Right_View_of_a_Binary_Tree",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Rotten_Oranges",
+            "request": "launch",
+            "mainClass": "Rotten_Oranges",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Sleep_Cycle",
+            "request": "launch",
+            "mainClass": "Sleep_Cycle",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Solution",
+            "request": "launch",
+            "mainClass": "Solution",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Strong_Language",
+            "request": "launch",
+            "mainClass": "Strong_Language",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch The_Last_Problem",
+            "request": "launch",
+            "mainClass": "The_Last_Problem",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Top_View_of_a_Binary_Tree",
+            "request": "launch",
+            "mainClass": "Top_View_of_a_Binary_Tree",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Validate_a_Tree",
+            "request": "launch",
+            "mainClass": "Validate_a_Tree",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Vertical_Order_Traacersal_of_Binary_Tree",
+            "request": "launch",
+            "mainClass": "Vertical_Order_Traacersal_of_Binary_Tree",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Vertical_Order_Traversal_of_Binary_Tree",
+            "request": "launch",
+            "mainClass": "Vertical_Order_Traversal_of_Binary_Tree",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Vertical_Order_Traversal_of_Binary_Tree_II",
+            "request": "launch",
+            "mainClass": "Vertical_Order_Traversal_of_Binary_Tree_II",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch Width_of_Shadow_of_a_Binary_Tree",
+            "request": "launch",
+            "mainClass": "Width_of_Shadow_of_a_Binary_Tree",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch XxOoRr",
+            "request": "launch",
+            "mainClass": "XxOoRr",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch binarytobase6",
+            "request": "launch",
+            "mainClass": "binarytobase6",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch cf_1537B",
+            "request": "launch",
+            "mainClass": "cf_1537B",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch cf_263A",
+            "request": "launch",
+            "mainClass": "cf_263A",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch cf_266B",
+            "request": "launch",
+            "mainClass": "cf_266B",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch cf_271A",
+            "request": "launch",
+            "mainClass": "cf_271A",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch cf_275A",
+            "request": "launch",
+            "mainClass": "cf_275A",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch cf_32B",
+            "request": "launch",
+            "mainClass": "cf_32B",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch cf_69A",
+            "request": "launch",
+            "mainClass": "cf_69A",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch cf_726A",
+            "request": "launch",
+            "mainClass": "cf_726A",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch hello_world",
+            "request": "launch",
+            "mainClass": "hello_world",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch solution",
+            "request": "launch",
+            "mainClass": "io.solution",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch printallknapsack",
+            "request": "launch",
+            "mainClass": "printallknapsack",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch printknapsack",
+            "request": "launch",
+            "mainClass": "printknapsack",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch randomtest",
+            "request": "launch",
+            "mainClass": "randomtest",
+            "projectName": "cp_cab0c1f1"
+        },
+        {
+            "type": "java",
+            "name": "Launch unfoldLL",
+            "request": "launch",
+            "mainClass": "unfoldLL",
+            "projectName": "cp_cab0c1f1"
+        }
+    ]
+}

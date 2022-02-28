@@ -1,0 +1,1 @@
+{"name":"Local: isAlienSorted","url":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\isAlienSorted.java","tests":[{"id":1631787013556,"input":"3\n\"hello\" \"leetcode\"\n\"hlabcdefgijkmnopqrstuvwxyz\"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\isAlienSorted.java","group":"local","local":true}

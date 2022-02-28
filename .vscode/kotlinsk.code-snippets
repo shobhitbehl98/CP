@@ -1,0 +1,17 @@
+{
+	"kotlinsk": {
+	"prefix": "kotlin",
+	"body": [
+	  "import java.util.Scanner",
+	  "fun main(args: Array<String>) {",
+	  "    val s=Scanner(System.`in`)",
+	  "    val t=s.nextInt()",
+	  "    while(t-->0){",
+	  "        ",
+	  "    }",
+	  "",
+	  "}"
+	],
+	"description": ""
+  }
+}
