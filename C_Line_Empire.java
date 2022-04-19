@@ -3,7 +3,7 @@
 import java.io.*;
 import java.util.*;
 
-public class java_template {
+public class C_Line_Empire {
 
     public static void main(String[] args) {
         FastReader f = new FastReader();
