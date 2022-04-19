@@ -10,23 +10,8 @@ public class java_template {
         StringBuilder sb = new StringBuilder();
         int t = f.nextInt();
         while (t-- > 0) {
-            int n = f.nextInt();
-            long a = f.nextLong();
-            long b = f.nextLong();
-            long[] arr = new long[n];
-            for (int i = 0; i < n; i++) {
-                arr[i] = f.nextLong();
-            }
-            long ans = 0;
-            for (int i = 0; i < n; i++) {
-                long eler = n - i;
-                long last = i == 0 ? 0 : arr[i - 1];
-                long d = Math.abs(arr[i] - last);
-                ans += d * Math.min(eler * b, a + b);
-            }
-            sb.append(ans + "\n");
+            
         }
-        System.out.println(sb);
 
     }
 
