@@ -1,1 +1,0 @@
-{"name":"Local: all_indices","url":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\all_indices.java","tests":[{"id":1633446784261,"input":"8\n4 4 4 5 4 3 2 4\n4","output":"0 1 2 4 7"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\all_indices.java","group":"local","local":true}
