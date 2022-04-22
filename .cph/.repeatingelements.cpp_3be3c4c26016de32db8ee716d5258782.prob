@@ -1,0 +1,1 @@
+{"name":"Local: repeatingelements","url":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\repeatingelements.cpp","tests":[{"id":1633168292287,"input":"1\n7\n1 5 3 4 3 5 6","output":"2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\repeatingelements.cpp","group":"local","local":true}
