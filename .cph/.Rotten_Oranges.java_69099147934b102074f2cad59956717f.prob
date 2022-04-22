@@ -1,1 +1,0 @@
-{"name":"Local: Rotten_Oranges","url":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\Rotten_Oranges.java","tests":[{"id":1629223524191,"input":"3 3\n2 1 1\n1 1 0\n0 1 1","output":"4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Shobh\\Desktop\\Coding\\cp\\Rotten_Oranges.java","group":"local","local":true}
