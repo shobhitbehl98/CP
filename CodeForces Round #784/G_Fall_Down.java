@@ -3,9 +3,7 @@
 import java.io.*;
 import java.util.*;
 
-public class F_Eating_Candies {
-
-     
+public class G_Fall_Down {
 
     public static void main(String[] args) {
         FastReader f = new FastReader();
@@ -13,26 +11,35 @@ public class F_Eating_Candies {
         int t = f.nextInt();
         while (t-- > 0) {
             int n=f.nextInt();
-            int[] a=f.readArray(n);
-            long sum=0;
-			HashMap<Long, Integer> set=new HashMap<>();
-			for (int i=0; i<n; i++) {
-				set.put(sum, i);
-				sum+=a[i];
-			}
-			long fullSum=sum;
-			long ans=0;
-			sum=0;
-			for (int i=n-1; i>=0; i--) {
-				sum+=a[i];
-				if (set.containsKey(sum) && sum*2<=fullSum) {
-					ans=set.get(sum)+(n-i);
-				}
-			}
-			System.out.println(ans);
-
+            int m=f.nextInt();
+            char[][] arr=new char[n][m];
+            for(int i=0;i<n;i++){
+                arr[i]=f.nextLine().toCharArray();
+            }
+            for(int i=n-2;i>=0;i--){
+                for(int j=0;j<m;j++){
+                    if(arr[i][j]=='*'){
+                        int k=i+1;
+                        while(k<n){
+                            if(arr[k][j]=='o'||arr[k][j]=='*'){
+                                break;
+                            }
+                            k++;
+                        }
+                        char y=arr[i][j];
+                        arr[i][j]='.';
+                        arr[k-1][j]=y;
+                    }
+                }
+            }
+            for(int i=0;i<n;i++){
+                for(int j=0;j<m;j++){
+                    System.out.print(arr[i][j]);
+                }
+                System.out.println();
+            } 
+            System.out.println(); 
         }
-        System.out.println(sb);
 
     }
 

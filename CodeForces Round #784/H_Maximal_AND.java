@@ -3,38 +3,31 @@
 import java.io.*;
 import java.util.*;
 
-public class F_Eating_Candies {
-
-     
+public class H_Maximal_AND {
 
     public static void main(String[] args) {
         FastReader f = new FastReader();
-        StringBuilder sb = new StringBuilder();
         int t = f.nextInt();
         while (t-- > 0) {
             int n=f.nextInt();
+            int k=f.nextInt();
             int[] a=f.readArray(n);
-            long sum=0;
-			HashMap<Long, Integer> set=new HashMap<>();
-			for (int i=0; i<n; i++) {
-				set.put(sum, i);
-				sum+=a[i];
-			}
-			long fullSum=sum;
-			long ans=0;
-			sum=0;
-			for (int i=n-1; i>=0; i--) {
-				sum+=a[i];
-				if (set.containsKey(sum) && sum*2<=fullSum) {
-					ans=set.get(sum)+(n-i);
+            long ans=0;
+			for (int bit=30; bit>=0; bit--) {
+				int missing=0;
+				for (int i:a) {
+					if ((i&(1<<bit))==0) {
+						missing++;
+					}
+				}
+				if (k>=missing) {
+					ans+=1<<bit;
+					k-=missing;
 				}
 			}
 			System.out.println(ans);
-
-        }
-        System.out.println(sb);
-
     }
+}
 
     static final Random random = new Random();
     static final int mod = 1_000_000_007;
