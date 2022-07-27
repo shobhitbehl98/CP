@@ -1,17 +1,28 @@
-/* Author _TrevorPhillips_ */
+/* Author shobhitbruh */
 
 import java.io.*;
 import java.util.*;
 
-public class java_template {
+public class A_Young_Physicist {
 
     public static void main(String[] args) {
         FastReader f = new FastReader();
         StringBuilder sb = new StringBuilder();
         int t = f.nextInt();
+        int x=0,y=0,z=0;
         while (t-- > 0) {
-            
+            x+=f.nextInt();
+            y+=f.nextInt();
+            z+=f.nextInt();
         }
+
+        if(x==0&&y==0&&z==0){
+            sb.append("YES\n");
+        }else{
+            sb.append("NO\n");
+        }
+        System.out.println(sb);
+
 
     }
 

@@ -1,17 +1,21 @@
-/* Author _TrevorPhillips_ */
+/* Author shobhitbruh */
 
 import java.io.*;
 import java.util.*;
 
-public class java_template {
+public class B_Queue_at_the_School {
 
     public static void main(String[] args) {
         FastReader f = new FastReader();
         StringBuilder sb = new StringBuilder();
+        int n = f.nextInt();
         int t = f.nextInt();
-        while (t-- > 0) {
+        char[] h = f.nextLine().toCharArray();
+        int i = 0;
+        while (i < h.length) {
             
         }
+        System.out.println(h);
 
     }
 

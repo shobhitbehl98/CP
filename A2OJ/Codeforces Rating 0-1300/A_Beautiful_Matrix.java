@@ -1,17 +1,25 @@
-/* Author _trevorphillips_ */
+/* Author shobhitbruh */
 
 import java.io.*;
 import java.util.*;
 
-public class java_template {
+public class A_Beautiful_Matrix {
 
     public static void main(String[] args) {
         FastReader f = new FastReader();
         StringBuilder sb = new StringBuilder();
-        int t = f.nextInt();
-        while (t-- > 0) {
-            
-        }
+        int[][] arr=f.read2dArray(5,5);
+        boolean n=false;
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr[0].length;j++){
+                        if(arr[i][j]==1){
+                            System.out.println(Math.abs(2-i)+Math.abs(2-j));
+                            n=true;    
+                        }
+            }
+            if(n)break;
+         }
+
 
     }
 
@@ -102,6 +110,15 @@ public class java_template {
             for (int i = 0; i < n; i++)
                 a[i] = nextInt();
             return a;
+        }
+        int[][] read2dArray(int n,int m) {
+            int[][] a = new int[n][m];
+            for(int i=0;i<a.length;i++){
+                for(int j=0;j<a[0].length;j++){
+                            a[i][j]=nextInt();
+                }
+             }
+             return a;
         }
 
         long nextLong() {

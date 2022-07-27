@@ -1,19 +1,40 @@
-/* Author _TrevorPhillips_ */
+/* Author _trevorphillips_ */
 
 import java.io.*;
 import java.util.*;
 
-public class java_template {
+public class B_Difference_of_GCDs {
 
     public static void main(String[] args) {
         FastReader f = new FastReader();
         StringBuilder sb = new StringBuilder();
         int t = f.nextInt();
         while (t-- > 0) {
-            
+            int n=f.nextInt();
+            int l=f.nextInt();
+            int r=f.nextInt();
+            boolean p=true;
+            StringBuilder m = new StringBuilder();
+            for(int i=1;i<n+1;i++){
+                if(((((l-1)/i)+1)*i)>r){
+                    // System.out.println(n+" "+l+" "+r+" - "+i+" "+(((l-1)/i)+1)*i);
+                    p=false;
+                    break;
+                }else{
+                    m.append(((((l-1)/i)+1)*i)+" ");
+                }
+            }
+            if(p){
+                sb.append("YES\n"+m.toString()+"\n");
+            }else{
+                sb.append("NO\n");
+            }
+
         }
+        System.out.println(sb);
 
     }
+   
 
     static final Random random = new Random();
     static final int mod = 1_000_000_007;

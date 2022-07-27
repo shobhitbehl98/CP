@@ -1,19 +1,77 @@
-/* Author _TrevorPhillips_ */
+/* Author _trevorphillips_ */
 
 import java.io.*;
 import java.util.*;
 
-public class java_template {
+public class E_Split_Into_Two_Sets {
 
     public static void main(String[] args) {
         FastReader f = new FastReader();
         StringBuilder sb = new StringBuilder();
         int t = f.nextInt();
         while (t-- > 0) {
-            
+            int n=f.nextInt();
+            int[][] input=new int[n][];
+			for (int i=0; i<n; i++) input[i]=f.readArray(2);
+			ArrayList<Integer>[] withNum=new ArrayList[n];
+			for (int i=0; i<n; i++) withNum[i]=new ArrayList<>();
+			for (int i=0; i<n; i++)
+				for (int j=0; j<2; j++)
+					withNum[--input[i][j]].add(i);
+			
+			//if anyone has 3 => impossible
+			for (ArrayList<Integer> list:withNum) {
+				if (list.size()>=3) {
+					sb.append("NO\n");
+					continue;
+				}
+			}
+			
+			ArrayList<Integer>[] adj=new ArrayList[n];
+			for (int i=0; i<n; i++) adj[i]=new ArrayList<>();
+			for (ArrayList<Integer> list:withNum) {
+				for (int i=0; i<list.size(); i++) {
+					for (int j=i+1; j<list.size(); j++) {
+						adj[list.get(i)].add(list.get(j));
+						adj[list.get(j)].add(list.get(i));
+					}
+				}
+			}
+            boolean ans=true;
+			ArrayDeque<Integer> bfs=new ArrayDeque<>();
+			boolean[] visited=new boolean[n];
+			boolean[] color=new boolean[n];
+			for (int i=0; i<n; i++) {
+				if (visited[i]) continue;
+//				System.out.println("Starting bfs at "+i);
+				visited[i]=true;
+				bfs.add(i);
+				while (!bfs.isEmpty()) {
+					int at=bfs.removeFirst();
+//					System.out.println("  in "+at);
+					for (int other:adj[at]) {
+						if (!visited[other]) {
+							visited[other]=true;
+							color[other]=!color[at];
+							bfs.add(other);
+						}
+						else if (color[other]==color[at]) {
+							ans=false;
+						}
+					}
+				}
+			}
+            if(ans){
+                sb.append("YES\n");
+            }else{
+                sb.append("NO\n");
+            }
+
         }
 
+        System.out.println(sb);
     }
+   
 
     static final Random random = new Random();
     static final int mod = 1_000_000_007;

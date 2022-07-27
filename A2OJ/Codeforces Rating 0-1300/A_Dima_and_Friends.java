@@ -3,15 +3,25 @@
 import java.io.*;
 import java.util.*;
 
-public class java_template {
+public class A_Dima_and_Friends {
 
     public static void main(String[] args) {
         FastReader f = new FastReader();
         StringBuilder sb = new StringBuilder();
         int t = f.nextInt();
-        while (t-- > 0) {
-            
+        int[] arr=f.readArray(t);
+        int sum=0;
+        for(int i=0;i<arr.length;i++){
+               sum+=arr[i];
         }
+        int ans=0;
+        for(int i=1;i<=5;i++){
+            if(((sum+i)%(t+1))!=1){
+                ans++;
+            }
+        }
+        System.out.println(ans);
+        
 
     }
 

@@ -13,16 +13,18 @@ public class H_2_Maximum_Crossings_Hard_Version {
             int n=f.nextInt();
             int[] a=f.readArray(n);
             int c=0;
-             TreeMap<Integer,Integer> tm=new TreeMap<>(Collections.reverseOrder());
+            int[] x=new int[200000];
+            
              for(int i=0;i<n;i++){
-                 for(int val:tm.keySet()){
-                     if(val>=a[i]){
-                         c+=tm.get(val);
-                     }else{
-                         break;
-                     }
-                 }
-                 tm.put(a[i],tm.getOrDefault(a[i],0)+1);
+                 x[a[i]]++;
+             }
+             int[] b=new int[x.length];
+             b[x.length-1]=x[x.length-1];
+             for(int i=x.length-2;i>=0;i--){
+                b[i]=b[i+1]+x[i];
+             }
+             for(int i=0;i<n;i++){
+                 
              }
              sb.append(c+"\n");
 

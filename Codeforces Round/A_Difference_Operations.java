@@ -1,17 +1,32 @@
-/* Author _TrevorPhillips_ */
+/* Author _trevorphillips_ */
 
 import java.io.*;
 import java.util.*;
 
-public class java_template {
+public class A_Difference_Operations {
 
     public static void main(String[] args) {
         FastReader f = new FastReader();
         StringBuilder sb = new StringBuilder();
         int t = f.nextInt();
         while (t-- > 0) {
-            
+            int n=f.nextInt();
+            int[] arr=f.readArray(n);
+            boolean ans=true;
+            int smallest=arr[0];
+            for(int i=1;i<arr.length;i++){
+                if(arr[i]%smallest!=0){
+                    ans=false;
+                    break;
+                }
+            }
+            if(ans){
+                sb.append("YES\n");
+            }else{
+                sb.append("NO\n");
+            }
         }
+        System.out.println(sb);
 
     }
 

@@ -1,20 +1,85 @@
-/* Author _TrevorPhillips_ */
+/* Author _trevorphillips_ */
 
 import java.io.*;
 import java.util.*;
 
-public class java_template {
+public class Main {
+
+    public static class Node{
+        int val;
+        ArrayList<Node> child;
+
+        Node(int val,ArrayList<Node> child){
+            this.val=val;
+            this.child=child;
+        }
+    }
 
     public static void main(String[] args) {
         FastReader f = new FastReader();
         StringBuilder sb = new StringBuilder();
         int t = f.nextInt();
+        max=0;
         while (t-- > 0) {
+           int n=f.nextInt();
+           HashMap<Integer,Node> hm=new HashMap<>();
+           for(int i=1;i<=n;i++){
+               ArrayList<Node> c=new ArrayList<>();
+               hm.put(i,new Node(i,c));
+           }
+           boolean[] root=new boolean[n+1];
+           int j=n-1;
+           while(j-->0){
+               int a=f.nextInt();
+               int b=f.nextInt();
+               hm.get(a).child.add(hm.get(b));
+               root[b]=true;
+           }
+           int head=0;
+           for(int i=1;i<=n;i++){
+               if(!root[i]){
+                   head=i;
+                   break;
+               }
+           }
+           PriorityQueue<Integer> pq=new PriorityQueue<>(Collections.reverseOrder());
+           for(int i=0;i<hm.get(head).child.size();i++){
+               int ret=fn(hm.get(head).child.get(i));
+               pq.add(ret);
+           }
+
+           if(pq.size()>=2){
+               int q1=pq.remove();
+               int q2=pq.remove();
+               max=Math.max(max,q1+q2+2);
+           }
+            sb.append(max+"\n");
+            max=0;
             
         }
+        System.out.println(sb);
 
     }
 
+    public static int fn(Node h){
+        PriorityQueue<Integer> pq=new PriorityQueue<>(Collections.reverseOrder());
+        for(int i=0;i<h.child.size();i++){
+            int ret=fn(h.child.get(i));
+            pq.add(ret);
+        }
+         
+        if(pq.size()>=2){
+            int q1=pq.remove();
+            int q2=pq.remove();
+            max=Math.max(max,q1+q2+2);
+            return q1+1;
+        }else if(pq.size()==1){
+            return pq.remove()+1;
+        }
+        
+        return 0;
+    }
+    public static int max; 
     static final Random random = new Random();
     static final int mod = 1_000_000_007;
 
